@@ -219,16 +219,27 @@ Tests cover:
 
 ```
 rest-api/
-├── index.js          # Entry point – server setup and route registration
-├── routes/
-│   └── users.js      # All user-related route handlers
+├── app.js          # Entry point – server setup and route registration
 ├── middleware/
 │   ├── logger.js     # Request logging middleware
 │   └── validate.js   # Validation middleware
 ├── data/
 │   └── users.js      # In-memory users array
-├── package.json
-└── README.md
+├── screenshots/
+│   ├── 01 GET users.png         # Get Users
+│   └── 02 GET user.png	         # Get User by Id (Success)
+│   └── 03 GET user.png	         # Get User by Id (Fail)
+│   └── 04 CREATE user.png	     # Create User (Success)
+│   └── 05 CREATE user.png	     # Create User (Fail)
+│   └── 06 UPDATE user.png	     # Update User by Id (Success)
+│   └── 07 UPDATE user.png	     # Update User by Id (Fail)
+│   └── 08 DELETE user.png	     # Delete User by Id (Success)
+│   └── 09 DELETE user.png	     # Delete User by Id (Fail)
+├── package.json                 # Package.json
+├── CHECKLIST.md                 # Project Checklist
+├── Problem Statement.pdf        # Problem Statement
+├── Screenshots.docx             # Contains all screenshots in one file.
+└── README.md                    # Readme for the project.
 ```
 
 ---
