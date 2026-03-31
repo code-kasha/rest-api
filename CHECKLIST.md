@@ -32,8 +32,8 @@
 
 | #   | Task                                                                | Done |
 | --- | ------------------------------------------------------------------- | ---- |
-| 3.1 | User object has `id`, `firstName`, `lastName`, and `hobby` fields   | ☐    |
-| 3.2 | `id` is auto-generated (e.g., using `uuid` or incrementing counter) | ☐    |
+| 3.1 | User object has `id`, `firstName`, `lastName`, and `hobby` fields   | ✅   |
+| 3.2 | `id` is auto-generated (e.g., using `uuid` or incrementing counter) | ✅   |
 
 ---
 

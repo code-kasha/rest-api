@@ -15,9 +15,7 @@ const rawUsers = [
 	{ firstName: "Kavya", lastName: "Bhat", hobby: "Writing" },
 ]
 
-export const users = rawUsers.map((user, index) => ({
+export default rawUsers.map((user, index) => ({
 	id: String(index + 1),
 	...user,
 }))
-
-export let nextId = rawUsers.length + 1
