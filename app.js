@@ -2,6 +2,7 @@ import express from "express"
 import users from "./data/users.js"
 
 import logger from "./middleware/loggger.js"
+import { validateUser, validateUserUpdate } from "./middleware/validation.js"
 
 const app = express()
 
@@ -21,24 +22,24 @@ app.get("/users", (req, res) => {
 app.get("/users/:id", (req, res) => {
 	const userId = req.params.id
 
-	const user = users.find((user) => user.id === userId)
+	const user = users.find((user) => String(user.id) === userId) // ← String()
 
 	if (!user) {
-		res.status(404).json({ message: `User not found` })
+		return res.status(404).json({ message: `User not found` }) // ← return
 	}
 
 	res.status(200).json(user)
 })
 
 // User Create
-app.post("/user", (req, res) => {
+app.post("/user", validateUser, (req, res) => {
 	const nextId = users.length + 1
 	const firstName = req.body.firstName
 	const lastName = req.body.lastName
 	const hobby = req.body.hobby
 
 	const newUser = {
-		id: nextId,
+		id: String(nextId), // ← store as string to stay consistent
 		firstName: firstName,
 		lastName: lastName,
 		hobby: hobby,
@@ -50,23 +51,23 @@ app.post("/user", (req, res) => {
 })
 
 // User Update
-app.put("/user/:id", (req, res) => {
+app.put("/user/:id", validateUserUpdate, (req, res) => {
 	const userId = req.params.id
 
-	const user = users.find((user) => user.id === userId)
+	const user = users.find((user) => String(user.id) === userId) // ← String()
 
 	if (!user) {
-		res.status(404).json({ message: `User not found` })
+		return res.status(404).json({ message: `User not found` }) // ← return
 	}
 
 	const keys = Object.keys(user)
 
 	keys.forEach((key) => {
 		if (key === "id") return
-		user[key] = req.body[key]
+		if (req.body[key] !== undefined) user[key] = req.body[key]
 	})
 
-	res.status(201).json(user)
+	res.status(200).json(user) // ← 200 not 201
 })
 
 // User Delete
@@ -84,4 +85,12 @@ app.delete("/user/:id", (req, res) => {
 	res.status(200).json({ status: "200 OK", message: `User deleted` })
 })
 
-app.listen(3000)
+app.use((err, req, res, next) => {
+	console.error(err.message)
+	res.status(500).json({
+		status: "500 Internal Server Error",
+		message: err.message,
+	})
+})
+
+app.listen(3000, () => console.log("Server running on http://localhost:3000"))
