@@ -2,6 +2,8 @@
 
 **Assignment:** Build a RESTful API using Node.js and Express (100 marks)
 
+**Please check the screenshots folder if the screenshot.docx is not clear**
+
 ---
 
 ## 👤 Author

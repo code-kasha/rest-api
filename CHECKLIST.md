@@ -43,20 +43,20 @@
 
 | #   | Task                                                      | Marks | Done |
 | --- | --------------------------------------------------------- | ----- | ---- |
-| 4.1 | Middleware logs HTTP **method** for each request          | –     | ☐    |
-| 4.2 | Middleware logs request **URL** for each request          | –     | ☐    |
-| 4.3 | Middleware logs **status code** for each request          | –     | ☐    |
-| 4.4 | Logger is applied globally (all routes) using `app.use()` | 15    | ☐    |
+| 4.1 | Middleware logs HTTP **method** for each request          | –     | ✅   |
+| 4.2 | Middleware logs request **URL** for each request          | –     | ✅   |
+| 4.3 | Middleware logs **status code** for each request          | –     | ✅   |
+| 4.4 | Logger is applied globally (all routes) using `app.use()` | 15    | ✅   |
 
 ### 4b. Validation Middleware — 15 Marks
 
 | #   | Task                                                                        | Marks | Done |
 | --- | --------------------------------------------------------------------------- | ----- | ---- |
-| 4.5 | Validation middleware applied to `POST /user`                               | –     | ☐    |
-| 4.6 | Validation middleware applied to `PUT /user/:id`                            | –     | ☐    |
-| 4.7 | Returns `400 Bad Request` with error message if required fields are missing | –     | ☐    |
-| 4.8 | POST validates: `firstName`, `lastName`, and `hobby` are present            | –     | ☐    |
-| 4.9 | PUT validates: at least one valid field is provided                         | 15    | ☐    |
+| 4.5 | Validation middleware applied to `POST /user`                               | –     | ✅   |
+| 4.6 | Validation middleware applied to `PUT /user/:id`                            | –     | ✅   |
+| 4.7 | Returns `400 Bad Request` with error message if required fields are missing | –     | ✅   |
+| 4.8 | POST validates: `firstName`, `lastName`, and `hobby` are present            | –     | ✅   |
+| 4.9 | PUT validates: at least one valid field is provided                         | 15    | ✅   |
 
 ---
 
@@ -64,11 +64,11 @@
 
 | #   | Task                                                     | Marks | Done |
 | --- | -------------------------------------------------------- | ----- | ---- |
-| 5.1 | Returns `200 OK` for successful GET/PUT/DELETE           | –     | ☐    |
-| 5.2 | Returns `201 Created` for successful POST                | –     | ☐    |
-| 5.3 | Returns `404 Not Found` when user ID doesn't exist       | –     | ☐    |
-| 5.4 | Returns `400 Bad Request` for invalid/missing input      | –     | ☐    |
-| 5.5 | Error responses include meaningful, descriptive messages | 10    | ☐    |
+| 5.1 | Returns `200 OK` for successful GET/PUT/DELETE           | –     | ✅   |
+| 5.2 | Returns `201 Created` for successful POST                | –     | ✅   |
+| 5.3 | Returns `404 Not Found` when user ID doesn't exist       | –     | ✅   |
+| 5.4 | Returns `400 Bad Request` for invalid/missing input      | –     | ✅   |
+| 5.5 | Error responses include meaningful, descriptive messages | 10    | ✅   |
 
 ---
 
@@ -76,8 +76,8 @@
 
 | #   | Task                                                      | Done |
 | --- | --------------------------------------------------------- | ---- |
-| 6.1 | Users stored in an in-memory array (no database required) | ☐    |
-| 6.2 | Array is initialized with at least one sample user        | ☐    |
+| 6.1 | Users stored in an in-memory array (no database required) | ✅   |
+| 6.2 | Array is initialized with at least one sample user        | ✅   |
 
 ---
 
