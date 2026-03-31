@@ -1,0 +1,22 @@
+{
+	"name": "rest-api",
+	"version": "1.0.0",
+	"description": "Build a RESTful API using Node.js and Express ",
+	"main": "app.js",
+	"type": "module",
+	"scripts": {
+		"dev": "nodemon app.js"
+	},
+	"keywords": [
+		"API",
+		"Node.js",
+		"Internshala"
+	],
+	"author": "Akash Damle <code-kasha>",
+	"license": "ISC",
+	"packageManager": "pnpm@10.33.0",
+	"dependencies": {
+		"express": "^5.2.1",
+		"nodemon": "^3.1.14"
+	}
+}

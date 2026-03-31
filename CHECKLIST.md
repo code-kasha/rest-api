@@ -20,11 +20,11 @@
 
 | #   | Route              | Description                    | Marks | Done |
 | --- | ------------------ | ------------------------------ | ----- | ---- |
-| 2.1 | `GET /users`       | Returns array of all users     | 5     | ☐    |
-| 2.2 | `GET /users/:id`   | Returns a single user by ID    | 5     | ☐    |
-| 2.3 | `POST /user`       | Adds a new user to the list    | 5     | ☐    |
-| 2.4 | `PUT /user/:id`    | Updates an existing user by ID | 5     | ☐    |
-| 2.5 | `DELETE /user/:id` | Deletes a user by ID           | 5     | ☐    |
+| 2.1 | `GET /users`       | Returns array of all users     | 5     | ✅   |
+| 2.2 | `GET /users/:id`   | Returns a single user by ID    | 5     | ✅   |
+| 2.3 | `POST /user`       | Adds a new user to the list    | 5     | ✅   |
+| 2.4 | `PUT /user/:id`    | Updates an existing user by ID | 5     | ✅   |
+| 2.5 | `DELETE /user/:id` | Deletes a user by ID           | 5     | ✅   |
 
 ---
 
