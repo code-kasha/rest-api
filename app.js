@@ -1,9 +1,12 @@
 import express from "express"
 import users from "./data/users.js"
 
+import logger from "./middleware/loggger.js"
+
 const app = express()
 
 app.use(express.json())
+app.use(logger)
 
 // User List
 app.get("/users", (req, res) => {
